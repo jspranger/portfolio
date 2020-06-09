@@ -1,0 +1,23 @@
+/*
+ *    Variables 
+ */
+
+$backgroundColor: #00adb5;
+$backgroundImageUrl: "./images/circuit.jpg";
+$backgroundImageOpacity: 0.1;
+
+/*
+ *    Styles
+ */
+
+.academic {
+  background-color: $backgroundColor;
+}
+
+.academic::after {
+  content: "";
+  background-image: url($backgroundImageUrl);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: $backgroundImageOpacity;
+}
