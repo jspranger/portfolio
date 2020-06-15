@@ -1,0 +1,332 @@
+/*
+ *    Variables 
+ */
+
+$backgroundColor: #eeeeee;
+$backgroundImageUrl: "./images/code.png";
+$backgroundRepeat: no-repeat;
+$backgroundImageOpacity: 0.1;
+
+/*
+ *    Styles
+ */
+
+/* TODO
+ * These styles can be simplified by using inline styles
+ * but for the sake of speeding up the process, that improvement
+ * has been postponed.
+ */
+ body {
+  background-color: grey;
+}
+
+.overlay {
+  position: relative;
+  z-index: -2;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.chat-bubble {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 25px 25px 25px 25px;
+  padding: 25px 45px 25px 45px;
+  color: #000000;
+  margin: 15px;
+  z-index: 0;
+}
+
+.chat-bubble:after {
+  content: "";
+  top: 100%;
+  left: calc(50% - 15px);
+  width: 0;
+  height: 0;
+  border-top: 15px solid #ffffff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  z-index: 0;
+}
+
+/* None Green */
+.chat-bubble-n-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+}
+
+.chat-bubble-n-g:after {
+  content: "";
+  border: none;
+}
+
+/* Down Green */
+.chat-bubble-d-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+}
+
+.chat-bubble-d-g:after {
+  content: "";
+  border-top: 15px solid #00adb5;
+}
+
+/* Left Green */
+.chat-bubble-l-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+}
+
+.chat-bubble-l-g:after {
+  content: "";
+  top: calc(50% - 15px);
+  left: -29px;
+  right: 0;
+  bottom: 0;
+  border-right: 15px solid #00adb5;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+/* Up Green */
+.chat-bubble-u-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+}
+
+.chat-bubble-u-g:after {
+  content: "";
+  top: -15px;
+  left: calc(50% - 15px);
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  border-bottom: 15px solid #00adb5;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+/* Right Green */
+.chat-bubble-r-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+}
+
+.chat-bubble-r-g:after {
+  content: "";
+  top: calc(50% - 15px);
+  left: calc(100% - 1px);
+  right: 0;
+  bottom: 0;
+  border-left: 15px solid #00adb5;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+/* Down Left Green */
+.chat-bubble-dl-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+  border-radius: 25px 25px 25px 0px;
+}
+
+.chat-bubble-dl-g:after {
+  content: "";
+  left: 0;
+  border-top: 15px solid #00adb5;
+  border-left: none;
+}
+
+/* Down Right Green */
+.chat-bubble-dr-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+  border-radius: 25px 25px 0px 25px;
+}
+
+.chat-bubble-dr-g:after {
+  content: "";
+  left: calc(100% - 15px);
+  border-top: 15px solid #00adb5;
+  border-left: 15px solid transparent;
+  border-right: none;
+}
+
+/* Up Left Green */
+.chat-bubble-ul-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+  border-radius: 0px 25px 25px 25px;
+}
+
+.chat-bubble-ul-g:after {
+  content: "";
+  left: 0;
+  top: -15px;
+  border-top: none;
+  border-bottom: 15px solid #00adb5;
+  border-left: none;
+  border-right: 15px solid transparent;
+}
+
+/* Up Right Green */
+.chat-bubble-ur-g {
+  background-color: #00adb5;
+  color: #eeeeee;
+  border-radius: 25px 0px 25px 25px;
+}
+
+.chat-bubble-ur-g:after {
+  content: "";
+  top: -15px;
+  left: calc(100% - 15px);
+  border-top: none;
+  border-bottom: 15px solid #00adb5;
+  border-left: 15px solid transparent;
+  border-right: none;
+}
+
+/* None White */
+.chat-bubble-n-w {
+  background-color: #eeeeee;
+  color: #393e46;
+}
+
+.chat-bubble-n-w:after {
+  content: "";
+  border: none;
+}
+
+/* Down White */
+.chat-bubble-d-w {
+  background-color: #eeeeee;
+  color: #393e46;
+}
+
+.chat-bubble-d-w:after {
+  content: "";
+  border-top: 15px solid #eeeeee;
+}
+
+/* Left White */
+.chat-bubble-l-w {
+  background-color: #eeeeee;
+  color: #393e46;
+}
+
+.chat-bubble-l-w:after {
+  content: "";
+  top: calc(50% - 15px);
+  left: -29px;
+  right: 0;
+  bottom: 0;
+  border-right: 15px solid #eeeeee;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+/* Up White */
+.chat-bubble-u-w {
+  background-color: #eeeeee;
+  color: #393e46;
+}
+
+.chat-bubble-u-w:after {
+  content: "";
+  top: -15px;
+  left: calc(50% - 15px);
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  border-bottom: 15px solid #eeeeee;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+/* Right White */
+.chat-bubble-r-w {
+  background-color: #eeeeee;
+  color: #393e46;
+}
+
+.chat-bubble-r-w:after {
+  content: "";
+  top: calc(50% - 15px);
+  left: calc(100% - 1px);
+  right: 0;
+  bottom: 0;
+  border-left: 15px solid #eeeeee;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+/* Down Left White */
+.chat-bubble-dl-w {
+  background-color: #eeeeee;
+  color: #393e46;
+  border-radius: 25px 25px 25px 0px;
+}
+
+.chat-bubble-dl-w:after {
+  content: "";
+  left: 0;
+  border-top: 15px solid #eeeeee;
+  border-left: none;
+}
+
+/* Down Right White */
+.chat-bubble-dr-w {
+  background-color: #eeeeee;
+  color: #393e46;
+  border-radius: 25px 25px 0px 25px;
+}
+
+.chat-bubble-dr-w:after {
+  content: "";
+  left: calc(100% - 15px);
+  border-top: 15px solid #eeeeee;
+  border-left: 15px solid transparent;
+  border-right: none;
+}
+
+/* Up Left White */
+.chat-bubble-ul-w {
+  background-color: #eeeeee;
+  color: #393e46;
+  border-radius: 0px 25px 25px 25px;
+}
+
+.chat-bubble-ul-w:after {
+  content: "";
+  left: 0;
+  top: -15px;
+  border-top: none;
+  border-bottom: 15px solid #eeeeee;
+  border-left: none;
+  border-right: 15px solid transparent;
+}
+
+/* Up Right White */
+.chat-bubble-ur-w {
+  background-color: #eeeeee;
+  color: #393e46;
+  border-radius: 25px 0px 25px 25px;
+}
+
+.chat-bubble-ur-w:after {
+  content: "";
+  top: -15px;
+  left: calc(100% - 15px);
+  border-top: none;
+  border-bottom: 15px solid #eeeeee;
+  border-left: 15px solid transparent;
+  border-right: none;
+}

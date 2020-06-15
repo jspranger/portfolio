@@ -1,0 +1,40 @@
+/*
+ *    Variables 
+ */
+
+$backgroundColor: #00adb5;
+$contentBackgroundColor: #eeeeee;
+
+/*
+ *    Styles
+ */
+
+.interest {
+  background-color: $backgroundColor;
+}
+
+.interest-container {
+  background-color: $contentBackgroundColor;
+  border-radius: 25px;
+  padding: 25px 40px;
+  margin: 20px 0;
+}
+
+.tool-container {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.interest span {
+  vertical-align: bottom;
+}
+
+.smaller-tool-container {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.interest-avatar {
+  max-width: 200px;
+  max-height: 200px;
+}

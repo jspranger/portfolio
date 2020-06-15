@@ -1,0 +1,64 @@
+/*
+ *    Variables 
+ */
+
+$margin: 0;
+$titlesFontFamily: "Vollkorn";
+$bodyFontFamily: "Nunito";
+$bodyFontSize: 18px;
+$bodyDefaultColor: #393e46;
+$bodyLetterSpacing: 0.05em;
+$bodyLineHeight: 1.5;
+$ulLineHeight: 2.5;
+
+/*
+ *    Styles
+ */
+
+body {
+  margin: $margin;
+  font-family: $bodyFontFamily, Helvetica, sans-serif;
+  font-size: $bodyFontSize;
+  color: $bodyDefaultColor;
+  letter-spacing: $bodyLetterSpacing;
+  line-height: $bodyLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $titlesFontFamily, serif;
+}
+
+h1 {
+  font-size: 31px;
+}
+
+h2 {
+  font-size: 29px;
+}
+
+h3 {
+  font-size: 27px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+h6 {
+  font-size: 21px;
+}
+
+.increased-line-height {
+  line-height: $ulLineHeight;
+}

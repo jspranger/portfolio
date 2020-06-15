@@ -1,0 +1,31 @@
+/*
+ *    Variables 
+ */
+
+$backgroundColor: #eeeeee;
+$backgroundImageUrl: "./images/texture.png";
+
+/*
+ *    Styles
+ */
+
+.experience {
+  background-color: $backgroundColor;
+}
+
+.experience-overlay {
+  background-image: url($backgroundImageUrl);
+  background-repeat: repeat;
+}
+
+.experience-image-background {
+  background-color: #00adb5;
+}
+
+.left-border-green {
+  border-left: 3px solid #00adb5;
+}
+
+.right-border-green {
+  border-right: 3px solid #00adb5;
+}

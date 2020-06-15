@@ -1,7 +1,7 @@
 This README file is merely a placeholder.
 It will be replaced in the future with an adequate description of the project.
 
-This is a frontend React project with my personal Biography.
+This is a frontend React project with my personal Portfolio.
 
 _____
 

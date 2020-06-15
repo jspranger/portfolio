@@ -65,7 +65,13 @@ const override = (config, env) => {
   });
 
   config = rewireAliases.aliasesOptions({
-    "@components": path.resolve(__dirname, `${paths.appSrc}/components/`),
+    "@app": path.resolve(__dirname, `${paths.appSrc}/components/app/`),
+    "@pages": path.resolve(__dirname, `${paths.appSrc}/components/pages/`),
+    "@sections": path.resolve(
+      __dirname,
+      `${paths.appSrc}/components/sections/`
+    ),
+    "@utils": path.resolve(__dirname, `${paths.appSrc}/components/utils/`),
   })(config, env);
 
   return config;

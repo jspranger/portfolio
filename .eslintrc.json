@@ -47,11 +47,6 @@
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/ban-ts-ignore": "warn",
-    "@typescript-eslint/interface-name-prefix": [
-      "error",
-      { "prefixWithI": "always" }
-    ],
     "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "no-useless-constructor": "off",
     "no-await-in-loop": "warn",

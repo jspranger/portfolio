@@ -1,0 +1,36 @@
+/*
+ *    Variables 
+ */
+
+$backgroundColor: #00adb5;
+$backgroundImageUrl: "./images/circuit.png";
+$backgroundImageOpacity: 0.1;
+
+/*
+ *    Styles
+ */
+
+.academic {
+  background-color: $backgroundColor;
+}
+
+.academic-overlay {
+  background-image: url($backgroundImageUrl);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.avatar-picture {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.academic h6,
+.academic p {
+  margin: 0;
+}
+
+.academic strong {
+  color: $backgroundColor;
+  text-shadow: 0px 1px 2px #393e46;
+}
