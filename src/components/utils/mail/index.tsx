@@ -26,7 +26,7 @@ const Mail = (): JSX.Element => {
       message: string
     ): Promise<boolean> => {
       try {
-        await axios.post('http://localhost:8080/sendmail', {
+        await axios.post('https://jspranger.herokuapp.com/sendmail', {
           name,
           email,
           message,
