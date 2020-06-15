@@ -2,7 +2,7 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
+import Figure from 'react-bootstrap/Figure';
 
 interface ISelfProps {
   show: boolean;
@@ -21,21 +21,20 @@ interface ISelfProps {
 const ImagePreview = (props: ISelfProps): JSX.Element => {
   const { show, onHide, title, description, image } = props;
   return (
-    <Modal
-      show={show}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+    <Modal show={show} onHide={onHide} size="lg" centered>
       <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body className="d-flex flex-row justify-content-center align-items-center">
-        <Image src={image} />
+        <Figure className="d-flex flex-column justify-content-center align-items-center">
+          <Figure.Image alt={title} src={image} />
+          <Figure.Caption>{description}</Figure.Caption>
+        </Figure>
       </Modal.Body>
       <Modal.Footer>
-        <p>{description}</p>
-        <Button onClick={onHide}>Close</Button>
+        <Button className="w-50" variant="dark" onClick={onHide}>
+          Close
+        </Button>
       </Modal.Footer>
     </Modal>
   );

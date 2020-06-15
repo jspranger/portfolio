@@ -65,8 +65,8 @@ const ContactInfo = (): JSX.Element => {
 
       <hr className="bottom-contact-line" />
 
-      <Row noGutters className="w-50">
-        <Col className="d-flex flex-column justify-content-center align-items-center">
+      <Row noGutters className="w-75">
+        <Col className="d-flex flex-column justify-content-center align-items-start">
           <p>
             {contactLinkInfo.map((linkInfo, i) => (
               <span key={uuidv4()} className="m-2">

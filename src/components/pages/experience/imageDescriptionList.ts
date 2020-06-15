@@ -24,8 +24,8 @@ const imageDescriptionList: ImageDescription[] = [
     title: 'Down Count Trigger',
     description:
       'Hardware module programmed in Assembly, with a PIC microcontroller that drives ' +
-      'seven-segment displays, through multiplexing, to display a second by second down count. ' +
-      'Once 0 is reached it emmits visual and sound alerts, and activates ' +
+      'seven-segment displays, using multiplexing, to display a second by second down count. ' +
+      'Once 0 is reached it emits visual and audio alerts, and activates ' +
       'an elecro-mechanical switch that can be used for generic purposes.',
     image: counterCircuit,
   },
@@ -33,7 +33,7 @@ const imageDescriptionList: ImageDescription[] = [
     title: 'Anti-Carjacking Circuit',
     description:
       'Low cost AVR microcontroller based device capable of receiving SMS requests ' +
-      'and not only responding with its current coordinates, but also turn off the vehicle. ' +
+      'and not only respond with its current coordinates, but also turn off the vehicle. ' +
       'It interacts with both GSM and GPS modules using an event/interruption based logic, ' +
       'which allows it to gather all required information while keeping low power consumption.',
     image: anticarjackingCircuit,
@@ -41,25 +41,25 @@ const imageDescriptionList: ImageDescription[] = [
   {
     title: 'Anti-Carjacking Board Design',
     description:
-      '3D rendering of the proposed design for the Anti-Carjacking circuit board.',
+      '3D rendering of the proposed design for the circuit board of the Anti-Carjacking device.',
     image: anticarjackingBoard,
   },
   {
     title: 'Anti-Carjacking Map Tracker',
     description:
-      'Software built to track the coordinates gathered from the Anti-Carjacking device.' +
-      'It imports the messages directly from a phone using Hayes command set through a serial connection ' +
-      'and then filters the information through RegEx. Integrated to a maps API, it displays ' +
+      'Software built to track the coordinates gathered from the Anti-Carjacking device. ' +
+      'It imports the messages directly from a phone using Hayes command set through a serial connection, ' +
+      'and then filters the information through RegEx. Through integration with a maps API, it displays ' +
       'the most likely routes taken by the vehicle.',
     image: anticarjackingMap,
   },
   {
     title: 'Pectus Carinatum Pressure Meter',
     description:
-      'USB device powered by a 3V lithium battery that measures the force applied ' +
-      'by a Pectus Carinatum correction bar using a force sensing resistor, ' +
-      'and displays it in a small Nokia 5110 LCD. Uses an AVR microcontroller and interruptions ' +
-      'in order to maintain low poer consumption.',
+      'This USB device, powered by a 3V lithium battery, measures the force applied to the chest ' +
+      'by a Pectus Carinatum correction bar. It uses a force sensing resistor, ' +
+      'and displays the value in a small Nokia 5110 LCD. It is controlled by an AVR microcontroller, ' +
+      'and sleep modes and interruptions maintain its low power consumption.',
     image: carinatumForce,
   },
   {
@@ -67,7 +67,7 @@ const imageDescriptionList: ImageDescription[] = [
     description:
       'CAD design for an automatic medicine dispenser for the elderly. ' +
       'It contains multiple sections that can be recharged with medication, ' +
-      'a motor to spin the sections and dispenser tube for the pills to fall. ' +
+      'a motor to spin the sections and a dispenser tube for the pills to fall. ' +
       'An embedded system is responsible for controlling its operation.',
     image: medboxCad,
   },
@@ -81,16 +81,16 @@ const imageDescriptionList: ImageDescription[] = [
   {
     title: 'Medbox Main Module',
     description:
-      'Controller board that provides the functionality to the pill dispenser module, ' +
-      'and interacts with the user by means of a touch screen.',
+      'Controller board that provides the functionality to the pill dispenser module. ' +
+      'User interaction is achieved by means of a touch screen.',
     image: medboxConstruction,
   },
   {
     title: 'Medbox System',
     description:
-      'Pill dispenser system with an intuitive UI that shows medication dispenses scheduling ' +
-      'and requires activation. And additionally a separate portable module that synchronizes ' +
-      'the scheduling with the main module.',
+      'Pill dispenser system with an intuitive UI that shows medication scheduling, alerts upon time ' +
+      'and requires user confirmation to drop the pills. And in addition, a separate portable module ' +
+      'that synchronizes the scheduling with the main module and alerts through vibration.',
     image: medboxWorking,
   },
   {
@@ -105,28 +105,29 @@ const imageDescriptionList: ImageDescription[] = [
     title: 'Kuid Software',
     description:
       'UI example of a movie library overlayed upon the television channel, and a fullscreen movie player. ' +
-      'Besides speech and gestures for specific actions, a hand-tracking controlled cursor can used to interact ' +
-      'with the interface, in which hand gestures are used to commit the intended action.',
+      'In addition to speech and gestures for specific actions, a hand-tracking controlled cursor can be used ' +
+      'to interact with the interface, in which hand gestures commit the intended action.',
     image: kuidSoftware,
   },
   {
     title: 'Hand Bones Rendering',
     description:
       'Using a third party software, a consistent filtering pipeline strategy was found in order to extract ' +
-      'all isolated bones from CT images of hands. Here are illustrated the various labels for the bones.',
+      'all isolated bones from CT images of hands. This is a 3D rendering of the various labels ' +
+      'that were segmented from a hand CT scan.',
     image: segmentationView,
   },
   {
     title: 'Hand Bones Extraction',
     description:
-      'Using Python and scientific libraries, a previously found strategy for extracting hand bones in ' +
+      'Using Python and scientific libraries, a strategy for extracting hand bones in ' +
       'medical images was successfully implemented.',
     image: segmentationPython,
   },
   {
     title: 'Bone Surface Reconstruction',
     description:
-      'A strategy was found and implemented in order to improve the surface of 3D bone reconstruction ' +
+      'An approach was found and implemented in order to improve the surface of 3D bone reconstruction ' +
       'from CT medical images. It creates watertight meshes by closing holes and removing artifacts from ' +
       'the inside of the bone.',
     image: stlCleanup,

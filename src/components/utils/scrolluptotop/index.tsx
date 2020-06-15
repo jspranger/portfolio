@@ -25,7 +25,7 @@ const ScrollUpToTop = (): JSX.Element => {
   return (
     <Fade in={showScroll}>
       <FontAwesomeIcon
-        className="scroll-top-button"
+        className="scroll-top-button cursor-pointer"
         icon={faChevronCircleUp}
         onClick={scrollTop}
       />
