@@ -1,0 +1,20 @@
+/*
+ *    Variables 
+ */
+
+$backgroundColor: #00adb5;
+$fontColor: #393e46;
+$fontSize: 16px;
+
+/*
+  *    Styles
+  */
+
+.carousel-caption .caption-container {
+  background-color: $backgroundColor;
+}
+
+.carousel-caption p {
+  font-size: $fontSize;
+  color: $fontColor;
+}

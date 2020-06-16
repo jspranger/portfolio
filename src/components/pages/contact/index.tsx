@@ -1,21 +1,29 @@
 // External imports
-import React from 'react';
+import React, { useContext } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-// Presentation imports
+// Context imports
+import ScreenSizeContext, { ScreenSize } from '@contexts/screensize';
+
+// Local component imports
 import '@pages/contact/styles.scss';
 import Mail from '@utils/mail';
 import ContactInfo from '@sections/contactinfo';
 
 const Contact = (): JSX.Element => {
+  const screenSize = useContext(ScreenSizeContext);
+  const containerClasses = `d-flex flex-column ${
+    screenSize > ScreenSize.sm ? 'w-75' : 'w-100'
+  }`;
+
   return (
     <Row
       noGutters
       xs={1}
       className="contact w-100 h-100 d-flex flex-column justify-content-center align-items-center"
     >
-      <Col className="d-flex flex-column w-75">
+      <Col className={containerClasses}>
         <Row
           noGutters
           xs={1}

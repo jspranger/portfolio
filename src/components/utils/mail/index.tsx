@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
-// Presentation imports
+// Local component imports
 import '@utils/mail/styles.scss';
 
 const Mail = (): JSX.Element => {
@@ -77,7 +77,7 @@ const Mail = (): JSX.Element => {
           <Form.Control.Feedback type="invalid">
             Please enter your email
           </Form.Control.Feedback>
-          <Form.Text className="text-muted">
+          <Form.Text>
             Your email will never be shared with anyone else.
           </Form.Text>
         </Form.Group>

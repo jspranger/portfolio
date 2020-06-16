@@ -1,7 +1,7 @@
 // External imports
 import React from 'react';
 
-// Presentation imports
+// Local component imports
 import '@utils/chatbubble/styles.scss';
 
 enum Direction {

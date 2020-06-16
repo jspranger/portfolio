@@ -8,7 +8,7 @@ const ExperienceHardware = (): JSX.Element => {
         I began my career creating prototypes for a couple of hardware projects,
         which involved:
       </p>
-      <ul className="increased-line-height">
+      <ul>
         <li>drawing schematics and PCBs</li>
         <li>
           programming firmware for microcontrollers to monitor sensors and

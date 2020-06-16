@@ -1,32 +1,28 @@
 // External imports
-import React from 'react';
+import React, { useContext } from 'react';
 
-// Presentation imports
+// Context imports
+import ScreenSizeContext, { ScreenSize } from '@contexts/screensize';
+
+// Local component imports
 import ChatBubble, { Direction, Color } from '@utils/chatbubble';
 
-interface IScreenSizeStatus {
-  isXlScreen?: boolean;
-  isLgScreen?: boolean;
-  isMdScreen?: boolean;
-  isSmScreen?: boolean;
-}
+const AcademicTextBubbbleDr = (): JSX.Element => {
+  const screenSize = useContext(ScreenSizeContext);
 
-const AcademicTextBubbbleDr = (props: IScreenSizeStatus): JSX.Element => {
   const textDr: string =
     "<p>I've graduated in <h6><strong>Industrial Informatics</strong>,</h6> " +
     'which blends <h6><strong>Computer Engineering</strong></h6> ' +
     'and <h6><strong>Electronics</strong>,</h6> ' +
     'providing me with a wide array of tools and knowledge to work in different areas.</p>';
 
-  const { isXlScreen, isLgScreen } = props;
-
   let direction = Direction.None;
 
-  if (isLgScreen) {
+  if (screenSize >= ScreenSize.lg) {
     direction = Direction.Down;
   }
 
-  if (isXlScreen) {
+  if (screenSize >= ScreenSize.xl) {
     direction = Direction.DownRight;
   }
 

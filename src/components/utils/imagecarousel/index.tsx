@@ -1,9 +1,11 @@
 // External imports
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import { v4 as uuidv4 } from 'uuid';
 
-// Presentation imports
+// Local component imports
+import '@utils/imagecarousel/styles.scss';
 import ImagePreview from '@utils/imagepreview';
 
 export interface IImageInfo {
@@ -58,6 +60,13 @@ const ImageCarousel = (props: ISelfProps): JSX.Element => {
                 src={imageInfo.image}
                 alt={altText}
               />
+              <Carousel.Caption>
+                <Jumbotron className="m-0 p-0 caption-container">
+                  <p>
+                    <strong>{imageInfo.title}</strong>
+                  </p>
+                </Jumbotron>
+              </Carousel.Caption>
             </Carousel.Item>
           );
         })}

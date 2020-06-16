@@ -1,9 +1,12 @@
 // External imports
-import React from 'react';
+import React, { useContext } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-// Presentation imports
+// Context imports
+import ScreenSizeContext, { ScreenSize } from '@contexts/screensize';
+
+// Local component imports
 import '@pages/info/styles.scss';
 import jspranger from '@pages/info/images/jspranger.png';
 import NavigationBar from '@utils/navigationbar';
@@ -11,6 +14,8 @@ import InfoProfileIntro from '@sections/infoprofileintro';
 import InfoProfileDescription from '@sections/infoprofiledescription';
 
 const Info = (): JSX.Element => {
+  const screenSize = useContext(ScreenSizeContext);
+
   return (
     <Row
       noGutters
@@ -18,7 +23,11 @@ const Info = (): JSX.Element => {
       className="info w-100 h-100 d-flex flex-column justify-content-center align-items-center"
     >
       <Col className="info-overlay flex-grow-1 d-flex flex-column justify-content-center align-items-center">
-        <Row noGutters xs={1} className="w-75">
+        <Row
+          noGutters
+          xs={1}
+          className={screenSize > ScreenSize.sm ? 'w-75' : 'w-100'}
+        >
           <Col>
             <NavigationBar />
           </Col>

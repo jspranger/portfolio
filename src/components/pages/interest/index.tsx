@@ -1,5 +1,5 @@
 // External imports
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,7 +7,10 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
-// Presentation imports
+// Context imports
+import ScreenSizeContext, { ScreenSize } from '@contexts/screensize';
+
+// Local component imports
 import '@pages/interest/styles.scss';
 import avatar from '@pages/interest/images/avatar-interest.svg';
 import java from '@pages/interest/images/java.png';
@@ -36,6 +39,11 @@ import jest from '@pages/interest/images/jest.png';
 import ImageCard from '@utils/imagecard';
 
 const Interest = (): JSX.Element => {
+  const screenSize = useContext(ScreenSizeContext);
+  const containerClasses = `d-flex flex-column ${
+    screenSize > ScreenSize.sm ? 'w-75' : 'w-100'
+  }`;
+
   const collegeTools = [java, android, csharp, matlab, php, ruby];
   const workTools = [cpp, qt, git, opencv, itk, vtk];
   const latestTools = [nodejs, docker, jenkins, react, redux, typescript, jest];
@@ -51,23 +59,30 @@ const Interest = (): JSX.Element => {
       xs={1}
       className="interest w-100 h-100 d-flex flex-column justify-content-center align-items-center"
     >
-      <Col className="d-flex flex-column w-75">
+      <Col className={containerClasses}>
         <Row noGutters xs={1} md={1} lg={1} xl={1} className="flex-grow-1">
           <Col className="d-flex flex-column justify-content-center align-items-center">
             <Jumbotron fluid className="flex-grow-1 w-100 interest-container">
               <Container className="p-0 h-100">
-                <Row noGutters sm={1} md={1} lg={2} xl={2} className="h-100">
+                <Row
+                  noGutters
+                  sm={1}
+                  md={1}
+                  lg={2}
+                  xl={2}
+                  className="h-100 d-flex flex-column justify-content-center align-items-center"
+                >
                   <Col
                     lg={11}
                     xl={11}
                     className="d-flex flex-column justify-content-center align-items-center"
                   >
-                    <Row noGutters xs={1} lg={2} className="ml-3">
+                    <Row noGutters xs={1} lg={2} className="w-100">
                       <Col>
                         <ImageCard
                           images={collegeTools}
                           imageStyle="tool-container"
-                          description="During University, I had the chance to work with various great languages and frameworks"
+                          description="During University, I had the chance to work with, among others, the following languages and frameworks:"
                         />
                       </Col>
                       <Col>
@@ -80,17 +95,12 @@ const Interest = (): JSX.Element => {
                       <Col>
                         <Row
                           noGutters
-                          xs={1}
                           className="flex-grow-1 d-flex flex-column justify-content-center align-items-center"
                         >
                           <Col>
                             <ImageCard description={pythonDescription} />
                           </Col>
-                          <Col
-                            lg={1}
-                            xl={1}
-                            className="d-flex flex-column justify-content-center align-items-center"
-                          >
+                          <Col className="d-flex flex-column justify-content-center align-items-center">
                             <Image
                               className="interest-avatar m-3 d-none d-lg-block"
                               src={avatar}

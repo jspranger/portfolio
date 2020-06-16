@@ -9,7 +9,6 @@ $bodyFontSize: 18px;
 $bodyDefaultColor: #393e46;
 $bodyLetterSpacing: 0.05em;
 $bodyLineHeight: 1.5;
-$ulLineHeight: 2.5;
 
 /*
  *    Styles
@@ -57,10 +56,6 @@ h2 {
 
 h6 {
   font-size: 21px;
-}
-
-.increased-line-height {
-  line-height: $ulLineHeight;
 }
 
 .cursor-pointer {

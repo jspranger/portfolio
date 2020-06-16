@@ -1,26 +1,22 @@
 // External imports
-import React from 'react';
+import React, { useContext } from 'react';
 
-// Presentation imports
+// Context imports
+import ScreenSizeContext, { ScreenSize } from '@contexts/screensize';
+
+// Local component imports
 import ChatBubble, { Direction, Color } from '@utils/chatbubble';
 
-interface IScreenSizeStatus {
-  isXlScreen?: boolean;
-  isLgScreen?: boolean;
-  isMdScreen?: boolean;
-  isSmScreen?: boolean;
-}
+const AcademicTextBubbleCert = (): JSX.Element => {
+  const screenSize = useContext(ScreenSizeContext);
 
-const AcademicTextBubbleCert = (props: IScreenSizeStatus): JSX.Element => {
   const textCert: string =
     '<p>Other than that, I keep updating my skills with online courses in ' +
     'new and exciting technologies!</p>';
 
-  const { isXlScreen, isLgScreen } = props;
-
   return (
     <ChatBubble
-      direction={isXlScreen || isLgScreen ? Direction.Up : Direction.None}
+      direction={screenSize >= ScreenSize.lg ? Direction.Up : Direction.None}
       color={Color.White}
       innerHtml={textCert}
     />

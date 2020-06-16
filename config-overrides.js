@@ -72,6 +72,7 @@ const override = (config, env) => {
       `${paths.appSrc}/components/sections/`
     ),
     "@utils": path.resolve(__dirname, `${paths.appSrc}/components/utils/`),
+    "@contexts": path.resolve(__dirname, `${paths.appSrc}/contexts/`),
   })(config, env);
 
   return config;

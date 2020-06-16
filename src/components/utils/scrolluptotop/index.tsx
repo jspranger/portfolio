@@ -3,7 +3,7 @@ import Fade from 'react-bootstrap/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 
-// Presentation imports
+// Local component imports
 import '@utils/scrolluptotop/styles.scss';
 
 const ScrollUpToTop = (): JSX.Element => {

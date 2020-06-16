@@ -94,7 +94,7 @@ const imageDescriptionList: ImageDescription[] = [
     image: medboxWorking,
   },
   {
-    title: 'Kuid Box Prototype',
+    title: 'Quid Box Prototype',
     description:
       'Multimodal device capable of recognizing commands through speech and gestures, and overlays the ' +
       'television signal with a custom interface. It allows to change channel and volume, as well as running ' +
@@ -102,7 +102,7 @@ const imageDescriptionList: ImageDescription[] = [
     image: kuidPrototype,
   },
   {
-    title: 'Kuid Software',
+    title: 'Quid Software',
     description:
       'UI example of a movie library overlayed upon the television channel, and a fullscreen movie player. ' +
       'In addition to speech and gestures for specific actions, a hand-tracking controlled cursor can be used ' +

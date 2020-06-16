@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { v4 as uuidv4 } from 'uuid';
 
-// Presentation imports
+// Local component imports
 import '@utils/navigationbar/styles.scss';
 
 interface ISelfProps {

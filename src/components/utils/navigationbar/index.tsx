@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-// Presentation imports
+// Local component imports
 import '@utils/navigationbar/styles.scss';
 
 const navLinkSelected = (eventKey: any, e: any) => {
@@ -25,7 +25,7 @@ const NavigationBar = (): JSX.Element => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link href="academic" onSelect={navLinkSelected}>
-            Academics
+            Academia
           </Nav.Link>
           <Nav.Link href="experience" onSelect={navLinkSelected}>
             Experience
